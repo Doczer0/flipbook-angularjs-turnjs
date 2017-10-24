@@ -14,9 +14,14 @@ angular.module('bookApp')
         scope.onResizeFunction = function() {
           scope.windowHeight = $window.innerHeight;
           scope.windowWidth = $window.innerWidth;
-          console.log(scope.windowHeight);
-          console.log(scope.windowWidth);
-          $(element).turn('size', scope.windowWidth + 'px', scope.windowWidth + 'px');
+          var height = Math.round(scope.windowWidth / 1.38);
+          var padded = Math.round(scope.windowHeight * 0.9);
+          var width = scope.windowWidth;
+          if(height > padded) {
+            height = (height / 100) * 71.1;
+            width = (width / 100) * 88;
+          }
+          $(element).turn('size', width + 'px', height + 'px');
         };
          angular.element($window).bind('resize', function() {
          scope.onResizeFunction();
