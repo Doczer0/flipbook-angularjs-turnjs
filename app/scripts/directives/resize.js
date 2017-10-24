@@ -7,12 +7,20 @@
  * # resize
  */
 angular.module('bookApp')
-  .directive('resize', function () {
+  .directive('resize', function ($window) {
     return {
       restrict: 'A',
-      link: function postLink(scope, element, attrs) {
-        element.bind('resize', function(){
-          $('#flipbook').turn('size', '10%', '10vh');
+      link: function(scope, element, attrs) {
+        scope.onResizeFunction = function() {
+          scope.windowHeight = $window.innerHeight;
+          scope.windowWidth = $window.innerWidth;
+          console.log(scope.windowHeight);
+          console.log(scope.windowWidth);
+          $(element).turn('size', scope.windowWidth + 'px', scope.windowWidth + 'px');
+        };
+         angular.element($window).bind('resize', function() {
+         scope.onResizeFunction();
+         scope.$apply();
         });
       }
     };

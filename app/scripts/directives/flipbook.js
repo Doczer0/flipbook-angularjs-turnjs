@@ -14,7 +14,8 @@ angular.module('bookApp')
       $('#flipbook').turn({
         width: '100%',
         height: '100vh',
-        autoCenter: true
+        autoCenter: true,
+        acceleration: true
       });
     },
     controller: function($scope){
