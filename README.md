@@ -5,8 +5,8 @@ version 0.16.0.
 
 ## Dependencies
 
-Run `npm install` for install all npm dependencies.
-Run `bower install` for install all bower dependencies.
+Run `npm install` for install npm dependencies.
+Run `bower install` for install bower dependencies.
 
 ## Build & development
 
