@@ -25,6 +25,6 @@ angular.module('bookApp')
       }
      
     },
-    templateUrl: "views/about.html"
+    templateUrl: "views/boilerplate.html"
   }
   });

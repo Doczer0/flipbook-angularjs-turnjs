@@ -1,1 +1,14 @@
-<flipbook></flipbook>
+<div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+        <div class="text-center">
+        </div>
+        <div class="text-center" ng-repeat="object in books">
+            <div ng-repeat="book in object">
+                <h4>{{ book.book_name }}</h4>
+                <div class="form-group">
+                        <button class="btn btn-primary btn-lg">Ver livro</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
