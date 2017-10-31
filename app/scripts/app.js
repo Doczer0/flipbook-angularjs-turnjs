@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'angularTurn'
+    'angularTurn',
+    'angular-thumbnails'
   ])
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider

@@ -1,12 +1,15 @@
 <div class="row">
     <div class="col-sm-4 col-sm-offset-4">
         <div class="text-center">
-        </div>
-        <div class="text-center" ng-repeat="object in books">
-            <div ng-repeat="book in object">
-                <h4>{{ book.book_name }}</h4>
-                <div class="form-group">
-                        <button class="btn btn-primary btn-lg">Ver livro</button>
+            <h3 ng-if="books.response.length == 0">Não há livros cadastrados</h3>
+            <div ng-repeat="object in books">
+                <div ng-repeat="book in object">
+                    <h3>{{ book.book_name }}</h3>
+                    <thumbnail file-type="pdf" source="{{ book.book_pdf_url }}" max-height="250" max-width="300"></thumbnail>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Ler livro</button>
+                    </div>
+                    <hr>
                 </div>
             </div>
         </div>

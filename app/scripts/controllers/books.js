@@ -9,4 +9,4 @@
  */
 angular.module('bookApp')
   .controller('BooksCtrl', function () {
-  });
+});
